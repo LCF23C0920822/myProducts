@@ -1,4 +1,3 @@
-import os
 from flask import Flask, render_template
 from pymongo import MongoClient
 
@@ -6,7 +5,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
     # Conexión a MongoDB Atlas
-client = MongoClient(os.getenv("MONGODB_URI"))
+client = MongoClient('mongodb+srv://mpoma:Universo789$@mycluster789.mdxep.mongodb.net/?retryWrites=true&w=majority&appName=MyCluster789')
 db = client.shop_db
 
 @app.route('/')
